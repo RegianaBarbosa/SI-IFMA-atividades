@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Lanchonete do IFMA</title>
+    <link rel="stylesheet" href="../q4/styles.css">
+</head>
+
+<body class="container my-2 p-3">
+    <h1 id="title" class="text-center">Lanchonete do IFMA</h1>
+    <form class="form">
+        <div class="card">
+            <div class="card-body">
+                <div class="col form-group m-2">
+                    <label id="nomeCliente" class="h6">Nome do Cliente:</label>
+                    <input id="inputNome" class="form-control" type="text" placeholder="Informe o nome completo">
+                </div>
+                <div class="form-group col m-2 pt-2">
+                    <lab for="bebida" class="h6">Bebida:</lab>
+                    <div class="m-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="suco" name="bebida">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Suco
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="refri" name="bebida">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Refrigerante
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" value="agua" name="bebida">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Água
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col m-2 pt-2">
+                    <lab for="docSalgado" class="h6">Doces e Salgados:</lab>
+                    <div class="form-group m-2 docSalgado">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="bolo" name = "doceSalg">
+                            <label class="form-check-label" for="ckBolo">
+                                Bolo
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox"  value="pastel" name = "doceSalg">
+                            <label class="form-check-label" for="ckPastel">
+                                Pastel
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="torta" name = "doceSalg">
+                            <label class="form-check-label" for="ckTorta">
+                                Torta
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button id="btnCalcular" class="btn btn-primary" type="submit">Calcular</button>
+        </div>
+    </form>
+    <script src="../q4/main.js">
+
+    </script>
+</body>
+
+</html>
