@@ -17,7 +17,7 @@
             <div class="card-body">
                 <div class="col form-group m-2">
                     <label id="nomeCliente" class="h6">Nome do Cliente:</label>
-                    <input id="inputNome" class="form-control" type="text" placeholder="Informe o nome completo">
+                    <input id="inputNome" class="form-control" type="text" placeholder="Informe o nome completo" autofocus>
                 </div>
                 <div class="form-group col m-2 pt-2">
                     <lab for="bebida" class="h6">Bebida:</lab>
@@ -69,6 +69,7 @@
         </div>
         <div class="text-center mt-4">
             <button id="btnCalcular" class="btn btn-primary" type="submit">Calcular</button>
+            <button class="btn btn-default" type="reset" onClick="window.location.reload()">Limpar</button>
         </div>
     </form>
     <script src="../q4/main.js">
