@@ -49,7 +49,7 @@ calcButton.addEventListener('click', e => {
     //obter opcoes do check-box checked 
     let checkDocSalg = document.getElementsByName('doceSalg');
     console.log(checkDocSalg)
-    for(let i=0; i<checkDocSalg.length;i++){
+    for (var i = 0; i < checkDocSalg.length; i++) {
         if (checkDocSalg[i].checked == true) {
             switch (checkDocSalg[i].value) {
                 case 'bolo':
@@ -63,12 +63,16 @@ calcButton.addEventListener('click', e => {
                     break;
             }
         } else {
-            console.error("Item não encontrado");
+            console.error("Check não marcado");
         }
     }
 
+
+    nomeItens(pedido.getNome())
+
     //imprimir resultado
     window.alert('Nome do Cliente: ' + nome
+        + "\n Itens Consumidos: " +  nomeItens(pedido.getNome()).join(', ')
         + "\nTotal a pagar: R$ " + parseFloat(pedido.getTotal()).toFixed(2) + " reais")
 });
 
@@ -86,8 +90,25 @@ function criarPedido() {
                 total = total + item.getPreco()
             })
             return total
+        },
+
+        getNome: function () {
+            let nome = new Set()
+            this.itens.forEach(function (item) {
+                nome.add(item.getNome())
+            })
+            return nome
         }
     }
     return pedido
 }
 
+function nomeItens(mySet){
+    let nomes = []
+    var i = 0;
+    mySet.forEach((value) => {
+        nomes[i] = value
+        i++
+      });
+    return nomes
+}
