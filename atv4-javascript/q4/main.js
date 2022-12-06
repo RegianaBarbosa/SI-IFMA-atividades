@@ -20,8 +20,6 @@ const bolo = new item('Bolo', 3.50)
 const pastel = new item('Pastel', 3.00)
 const torta = new item('Torta', 4.00)
 
-
-let form = document.querySelector('.form')
 var totalPedido = 0;
 let pedido = criarPedido()
 
