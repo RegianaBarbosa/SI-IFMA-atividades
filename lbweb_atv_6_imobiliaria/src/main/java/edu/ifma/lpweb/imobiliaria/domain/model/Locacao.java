@@ -34,8 +34,8 @@ public class Locacao {
 	@ManyToOne
     private Imovel imovel;
 
-    @NotBlank //0 - não  1-sim
-    private int ativo;
+    @NotBlank
+    private boolean ativo;
 
     @NotBlank @DateTimeFormat
     private Date dt_inicio;
