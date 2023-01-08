@@ -16,9 +16,8 @@ import java.util.Optional;
 @AllArgsConstructor
 @Service
 public class ClienteService {
-    
     @Autowired
-    private ClienteRepository clienteRepository;
+    private final ClienteRepository clienteRepository;
 
     public Iterable<Cliente> todos(){
         return clienteRepository.findAll();

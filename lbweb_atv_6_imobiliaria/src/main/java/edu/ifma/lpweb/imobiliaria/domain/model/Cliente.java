@@ -1,42 +1,43 @@
 package edu.ifma.lpweb.imobiliaria.domain.model;
 
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.Email;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
+@Data
 @Getter @Setter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Cliente {
-    @EqualsAndHashCode.Include
+   
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @NotBlank @Size(max= 60)
     private String nome;
 
-    @NotBlank
+    @NotBlank @Size(max= 11)
     private String cpf;
 
     @NotBlank @Size(min= 8, max= 20)
     private String  telefone;
 
-    @NotBlank @Email @Size(max= 100)
+    @NotBlank @Size(max= 100)
     private String email;
 
-    @NotBlank @DateTimeFormat
-    private Date dt_nasc;
+    @Column(name="data_nasc")
+    private LocalDate dataNasc;  
 
 }
